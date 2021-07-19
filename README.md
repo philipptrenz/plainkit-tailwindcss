@@ -1,21 +1,36 @@
-<img src="http://getkirby.com/assets/images/github/plainkit.jpg" width="300">
+# Kirby Plainkit + Tailwind = 🤍
 
+This Repository extends the Kirby Plainkit by adding the following features:
 
-**Kirby: the CMS that adapts to any project, loved by developers and editors alike.**  
-The Plainkit is a minimal Kirby setup with the basics you need to start a project from scratch. It is the ideal choice if you are already familiar with Kirby and want to start step-by-step.
-
-You can learn more about Kirby at [getkirby.com](https://getkirby.com).
+- Define your CSS with [Utility-First](https://tailwindcss.com/docs/utility-first) using [Tailwind CSS](https://tailwindcss.com/)
+- Includes hot reloading using PostCSS and Gulp
+- Kirby is added as a submodule for easy update
 
 ### Try Kirby for free  
 You can try Kirby and the Plainkit on your local machine or on a test server as long as you need to make sure it is the right tool for your next project. … and when you’re convinced, [buy your license](https://getkirby.com/buy).
 
 ### Get going
-Read our guide on [how to get started with Kirby](https://getkirby.com/docs/guide/quickstart).
+Getting started is as easy as the following:
 
-You can [download the latest version](https://github.com/getkirby/plainkit/archive/main.zip) of the Plainkit.  
-If you are familiar with Git, you can clone Kirby's Plainkit repository from Github.
+```bash
+# Install JavaScript dependencies
+yarn install
 
-    git clone https://github.com/getkirby/plainkit.git
+# Start PHP server with Browser hot reloading
+yarn dev
+
+# Build CSS files for production
+yarn build
+```
+
+For updating Kirby to the latest version, just hit:
+
+```bash
+./update.sh
+```
+
+For getting started with Kirby, read the awesome guide on [how to get started with Kirby](https://getkirby.com/docs/guide/quickstart).
+
 
 ## What's Kirby?
 - **[getkirby.com](https://getkirby.com)** – Get to know the CMS.
