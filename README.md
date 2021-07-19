@@ -4,7 +4,7 @@ This Repository extends the Kirby Plainkit by adding the following features:
 
 - Define your CSS with [Utility-First](https://tailwindcss.com/docs/utility-first) using [Tailwind CSS](https://tailwindcss.com/)
 - Includes hot reloading using PostCSS and Gulp
-- Kirby is added as a submodule for easy update
+- Kirby is added as a submodule for easy updates
 
 ### Try Kirby for free  
 You can try Kirby and the Plainkit on your local machine or on a test server as long as you need to make sure it is the right tool for your next project. … and when you’re convinced, [buy your license](https://getkirby.com/buy).
