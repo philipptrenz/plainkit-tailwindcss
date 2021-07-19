@@ -1,0 +1,25 @@
+{
+  "name": "plainkit-tailwindcss",
+  "version": "1.0.0",
+  "description": "This repository extends the Kirby Plainkit by adding tailwindcss with hot reloading",
+  "repository": "https://github.com/philipptrenz/plainkit.git",
+  "author": "philipptrenz <mail@philipptrenz.de>",
+  "license": "",
+  "private": false,
+  "scripts": {
+    "dev": "gulp",
+    "build": "NODE_ENV=production gulp postcss"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "browser-sync": "^2.27.4",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.6",
+    "gulp": "^4.0.2",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-postcss": "^9.0.0",
+    "postcss-cli": "^8.3.1",
+    "postcss-nesting": "^8.0.1",
+    "tailwindcss": "^2.2.4"
+  }
+}

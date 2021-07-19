@@ -48,3 +48,13 @@ Icon
 # ---------------
 
 /site/config/.license
+
+# Node modules
+# ---------------
+
+node_modules
+
+# Generated CSS assets
+# ---------------
+
+/assets/css/*
