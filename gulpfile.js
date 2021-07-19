@@ -52,7 +52,7 @@ gulp.task('connect', function (done) {
         router: 'kirby/router.php',
     }, function () {
         browserSync({
-            proxy: 'localhost:8989',
+            proxy: '127.0.0.1:8989',
             open: false,
             notify: false,
         });
