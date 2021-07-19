@@ -13,6 +13,9 @@ You can try Kirby and the Plainkit on your local machine or on a test server as 
 Getting started is as easy as the following:
 
 ```bash
+# Initially pull Kirby as a submodule
+git submodule update --init --recursive
+
 # Install JavaScript dependencies
 yarn install
 
