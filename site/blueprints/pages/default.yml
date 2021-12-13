@@ -1,8 +1,20 @@
 title: Default Page
-preset: page
-fields:
-  text:
-    label: Text
-    type: textarea
-    size: large
+
+tabs:
+
+  # Content
+  content:
+    label: Content
+    icon: text
+    preset: page
+    fields:
+      text:
+        label: Text
+        type: textarea
+        size: large
+  
+  # Meta
+  meta: tabs/seo/meta
+
+
 

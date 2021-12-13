@@ -36,6 +36,86 @@ For updating Kirby to the latest version, just hit:
 For getting started with Kirby, read the awesome guide on [how to get started with Kirby](https://getkirby.com/docs/guide/quickstart).
 
 
+## HashandSalts SEO plugin
+
+See: https://github.com/HashandSalt/kirby3-seo
+
+After installing the plugin, setup controllers to bring in the shared SEO controller into each of your template
+controllers.
+
+The bare minimum controller looks like this:
+
+```
+<?php
+
+return function ($page, $kirby, $site) {
+
+  // SEO
+  $seo = $kirby->controller('seo' , compact('page', 'site', 'kirby'));
+
+  return $seo;
+
+};
+```
+
+To override any of the values, you can do this inside your controller. For example, to change the format of the meta title, you could do this:
+
+```
+<?php
+
+return function ($page, $kirby, $site) {
+
+  // Meta
+  $seo = $kirby->controller('seo' , compact('page', 'site', 'kirby'));
+
+  // Override Meta Title
+  $metatitle = $page->seotitle().' | '.$site->title();
+
+  $data = compact('metatitle');
+
+  return a::merge($seo, $data);
+
+};
+
+```
+
+Additionally, you need to populate the pages with information that is needed for the meta tags to be filled out correctly. The plugin contains blueprints for this and are meant to be used as tabs in your pages:
+
+```
+title:     Default
+
+tabs:
+
+  # SEO META
+  meta: tabs/seo/meta
+
+```
+
+In the `site.yml` also setup the contact tab which will capture social media account information.
+
+```
+title:     Site
+
+tabs:
+
+  # Contact
+  contact: tabs/seo/contact
+```
+
+Finally, output the meta tags in your templates with the following snippet.
+
+```
+<?= snippet('seo/meta') ?>
+```
+
+For convenience the plugin also contains a favicon snippet:
+
+```
+<?= snippet('seo/favicon') ?>
+```
+
+You can generate the favicons at [this website link](https://realfavicongenerator.net/)
+
 ## What's Kirby?
 - **[getkirby.com](https://getkirby.com)** – Get to know the CMS.
 - **[Try it](https://getkirby.com/try)** – Take a test ride with our online demo. Or download one of our kits to get started.
