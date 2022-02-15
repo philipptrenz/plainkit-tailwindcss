@@ -14,6 +14,6 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#4d6173">
   */ ?>
-  <style><? echo(new Asset('assets/css/tailwind.css'))->read() ?></style>
+  <style><?php echo(new Asset('assets/css/tailwind.css'))->read() ?></style>
 </head>
-<body class="<?= $bodyclasses ?? '' ?> ">
+<body class="<?= $bodyclasses ?? '' ?>">
