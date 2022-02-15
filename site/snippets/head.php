@@ -18,4 +18,4 @@
   <?= snippet('seo/favicon') ?>
   <style><?php echo(new Asset('assets/css/tailwind.css'))->read() ?></style>
 </head>
-<body class="<?= $bodyclasses ?? '' ?> ">
+<body class="<?= $bodyclasses ?? '' ?>">
