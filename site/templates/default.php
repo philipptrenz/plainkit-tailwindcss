@@ -1,15 +1,6 @@
-<html>
-<head>
-  <title><?= $site->title()->html() ?></title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <?= snippet('seo/meta') ?>
-  <?= snippet('seo/favicon') ?>
-  <?= css('assets/css/tailwind.css') ?>
-</head>
-<body>
+<?php snippet('head', [ 'bodyclasses' => '']); ?>
 
-  <h1 class="p-4 text-center text-xl font-bold"><?= $page->title() ?></h1>
+<h1><?= $page->title() ?></h1>
+<p><?= $page->text() ?></p>
 
-</body>
-</html>
+<?php snippet('foot'); ?>
