@@ -3,4 +3,4 @@
 	url = https://github.com/getkirby/kirby.git
 [submodule "site/plugins/kirby3-seo"]
 	path = site/plugins/kirby3-seo
-	url = https://github.com/HashandSalt/kirby3-seo
+	url = https://github.com/philipptrenz/kirby3-seo
