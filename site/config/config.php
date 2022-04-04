@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'languages' => true,
+    'languages' => false,
     'languages.detect' => true,
     'debug' => false,
     'routes' => [
