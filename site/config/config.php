@@ -3,7 +3,7 @@
 return [
     'languages' => true,
     'languages.detect' => true,
-    'debug' => false,
+    'debug' => true,
     'routes' => [
         [
           'pattern' => 'sitemap.xml',

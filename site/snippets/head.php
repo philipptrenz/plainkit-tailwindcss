@@ -12,7 +12,10 @@
   <meta name="theme-color" content="#4d6173">
   */ ?>
   <?= snippet('seo/meta') ?>
-  <?= snippet('seo/favicon') ?>
+  <?= snippet('seo/favicon', [
+    'themeColor' => '',
+    'maskIconColor' => '',
+  ]) ?>
   <style><?php echo(new Asset('assets/css/tailwind.css'))->read() ?></style>
 </head>
 <body class="<?= $bodyclasses ?? '' ?>">
