@@ -63,8 +63,7 @@ node_modules
 # Generated CSS assets
 # ---------------
 
-/assets/css/*
-
+/assets/css/tailwind.css
 
 # Update script
 # ---------------
