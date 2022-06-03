@@ -8,6 +8,10 @@
     'themeColor' => '',
     'maskIconColor' => '',
   ]) ?>
-  <style><?php echo(new Asset('assets/css/tailwind.css'))->read() ?></style>
+  <?php 
+    if ($libs['flickity'] && $libs['flickity']['enabled'] === true)
+      echo(css('assets/css/flickity/core.min.css'));
+  ?>
+  <?= css('assets/css/tailwind.css') ?>
 </head>
 <body class="<?= $bodyclasses ?? '' ?>">

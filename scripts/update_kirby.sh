@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # change to the kirby directory
-cd "$(dirname "$0")/kirby"
+cd kirby
 
 # update to the latest version
 git checkout master
