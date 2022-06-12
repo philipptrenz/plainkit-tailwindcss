@@ -1,4 +1,8 @@
   <?php 
+    if ($libs['flickity'] && $libs['flickity']['enabled'] === true) {
+      echo(js('/assets/js/flickity/core.min.js', [ 'defer' => true ]));
+    }
+
     if ($libs['alpine'] && $libs['alpine']['enabled'] === true) {
 
       $alpine = [ "/assets/js/alpine/core.min.js" ];
@@ -10,10 +14,6 @@
       if ($libs['alpine']['collapse'] === true)   $alpine[] = '/assets/js/alpine/collapse.min.js';
 
       echo(js($alpine, [ 'defer' => true ]));
-    }
-
-    if ($libs['flickity'] && $libs['flickity']['enabled'] === true) {
-      echo(js('/assets/js/flickity/core.min.js', [ 'defer' => true ]));
     }
 
     if ($libs['smooth-scroll'] && $libs['smooth-scroll']['enabled'] === true) {

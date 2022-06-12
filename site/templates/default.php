@@ -1,5 +1,8 @@
 <?php 
   $libs = [
+    'flickity' => [
+      'enabled' => true
+    ],
     'alpine' => [
       'enabled' => false,
       'mask' => false,
@@ -7,9 +10,6 @@
       'persist' => false,
       'focus' => false,
       'collapse' => false,  
-    ],
-    'flickity' => [
-      'enabled' => true
     ],
     'smooth-scroll' => [
       'enabled' => false
