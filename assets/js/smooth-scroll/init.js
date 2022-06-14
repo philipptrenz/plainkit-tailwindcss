@@ -3,7 +3,8 @@
  * Initiates smooth-scroll on load,
  * provides support for tailwindcss `scroll-*` classes
  */
-document.getElementById('smooth-scroll').addEventListener('load', function () {
+
+function initializeSmoothScroll() {
   new SmoothScroll('a[href*="#"]', {
     ignore: null,
     topOnEmptyHash: true,
@@ -25,4 +26,11 @@ document.getElementById('smooth-scroll').addEventListener('load', function () {
       return 0;
     },
   });
-});
+}
+
+if (window.SmoothScroll !== undefined) {
+  initializeSmoothScroll(); 
+} else {
+  const script = document.getElementById('smooth-scroll');
+  script.addEventListener('load', initializeSmoothScroll);
+}
