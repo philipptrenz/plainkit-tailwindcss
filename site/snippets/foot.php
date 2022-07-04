@@ -5,7 +5,7 @@
 
     if ($libs['alpine'] && $libs['alpine']['enabled'] === true) {
 
-      $alpine = [ "/assets/js/alpine/core.min.js" ];
+      $alpine = [];
       
       if ($libs['alpine']['mask'] === true)       $alpine[] = '/assets/js/alpine/mask.min.js';
       if ($libs['alpine']['intersect'] === true)  $alpine[] = '/assets/js/alpine/intersect.min.js';
@@ -13,6 +13,8 @@
       if ($libs['alpine']['focus'] === true)      $alpine[] = '/assets/js/alpine/focus.min.js';
       if ($libs['alpine']['collapse'] === true)   $alpine[] = '/assets/js/alpine/collapse.min.js';
 
+      $alpine[] = "/assets/js/alpine/core.min.js";  // Must be imported last
+      
       echo(js($alpine, [ 'defer' => true ]));
     }
 
