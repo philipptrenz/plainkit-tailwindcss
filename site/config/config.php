@@ -4,6 +4,13 @@ return [
     'languages' => false,
     'languages.detect' => true,
     'debug' => false,
+    'updates' => [
+      'plugins' => [
+          'sylvainjule/matomo'  => false,
+          'bnomei/robots-txt' => false,
+          'philipptrenz/kirby3-seo'  => false,
+      ]
+    ],
     'routes' => [
       [
       'pattern' => 'sitemap.xml',
