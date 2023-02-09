@@ -4,7 +4,7 @@
 cd kirby
 
 # update to the latest version
-git checkout master
+git checkout main
 git pull
 
 # change back into the main project folder
