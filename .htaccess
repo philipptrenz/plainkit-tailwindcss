@@ -54,8 +54,14 @@
   # block direct access to Kirby and the Panel sources
   RewriteRule ^kirby/(.*) index.php [L]
 
+  # block access to storage folder
+  RewriteRule ^storage/(.*) index.php [L]
+
   # block access to node_modules folder
   RewriteRule ^node_modules/(.*) index.php [L]
+
+  # block access to scripts folder
+  RewriteRule ^scripts/(.*) index.php [L]
 
   # make site links work
   RewriteCond %{REQUEST_FILENAME} !-f
