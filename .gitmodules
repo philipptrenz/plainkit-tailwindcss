@@ -7,3 +7,6 @@
 [submodule "site/plugins/kirby3-robots-txt"]
 	path = site/plugins/kirby3-robots-txt
 	url = https://github.com/bnomei/kirby3-robots-txt.git
+[submodule "site/plugins/kirby3-matomo"]
+	path = site/plugins/kirby3-matomo
+	url = https://github.com/sylvainjule/kirby-matomo.git

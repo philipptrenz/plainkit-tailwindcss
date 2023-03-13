@@ -1,5 +1,15 @@
+@import "fonts.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-[x-cloak] { display: none !important; }
+[x-cloak] { display: none !important; } /* Alpine.js */
+
+html {
+    @apply scroll-smooth;
+}
+
+body {
+    @apply min-h-screen;
+}
