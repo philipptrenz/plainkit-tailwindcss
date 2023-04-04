@@ -18,9 +18,6 @@ return [
   ],
 
   'libs' => [
-    'flickity' => [
-      'enabled' => false
-    ],
     'alpine' => [
       'enabled' => true,
       'mask' => false,
@@ -29,7 +26,7 @@ return [
       'focus' => false,
       'collapse' => true,  
     ],
-    'smooth-scroll' => [
+    'smoothscroll' => [
       'enabled' => true
     ],
   ],

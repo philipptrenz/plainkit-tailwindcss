@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="<?= $kirby->language() ? $kirby->language()->code() : 'en' ?>">
-
+    
     <?php 
-        $libs = option('libs');
-
         $themeColor = '';
         $maskIconColor = '';
-
-
     ?>
-
+    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -18,36 +14,31 @@
             'themeColor' => $themeColor,
             'maskIconColor' => $maskIconColor,
         ]) ?>
-        <?php if ($libs['flickity'] && $libs['flickity']['enabled'] === true): ?>
-            <?= css('assets/css/flickity.min.css') ?>
-        <?php endif; ?>
         <?= css('assets/css/tailwind.css') ?>
         <?= snippet('matomo') ?>
     </head>
 
     <body class="<?= " " . $bodyclasses ?? '' ?>">
 
-        <!-- HEADER -->
+        <?php /* HEADER */ ?>
         <header class="">
             <?= snippet('comps/header') ?>
         </header>
 
-        <!-- PAGE CONTENT -->
+        <?php /* PAGE CONTENT */ ?>
         <main class="">
             <?= $slot ?>
         </main>
 
-        <!-- FOOTER -->
+        <?php /* FOOTER */ ?>
         <footer class="">
             <?= snippet('comps/footer') ?>
         </footer>
 
-        <!-- JS LIBRARIES -->
-        <?php 
-            if ($libs['flickity'] && $libs['flickity']['enabled'] === true) {
-                echo(js('/assets/js/flickity/core.min.js', [ 'defer' => true ]));
-            }
-
+        <?php /* Load libs config from site/config/config.php */
+            $libs = option('libs'); 
+        ?>
+        <?php /* Alpine */
             if ($libs['alpine'] && $libs['alpine']['enabled'] === true) {
 
                 $alpine = [];
@@ -62,10 +53,11 @@
                 
                 echo(js($alpine, [ 'defer' => true ]));
             }
+        ?>
+        <?php /* Smoothscroll polyfill */
+            if ($libs['smoothscroll'] && $libs['smoothscroll']['enabled'] === true) {
 
-            if ($libs['smooth-scroll'] && $libs['smooth-scroll']['enabled'] === true) {
-                echo(js('/assets/js/smooth-scroll/init.js', [ 'defer' => true  ]));
-                echo(js('/assets/js/smooth-scroll/core.min.js', [ 'async' => true, 'id' => 'smooth-scroll' ]));
+                echo(js('/assets/js/smoothscroll/v0.4.4.min.js', [ 'defer' => true  ]));
             }
         ?>
 
