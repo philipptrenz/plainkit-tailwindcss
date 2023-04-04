@@ -1,0 +1,7 @@
+title: Admin
+description: The admin has full access to everything
+
+fields: 
+  # use this gap, so that the 'no fields defined' info is gone
+  gap:
+    type: gap

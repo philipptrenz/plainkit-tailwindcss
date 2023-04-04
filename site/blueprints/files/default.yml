@@ -1,0 +1,10 @@
+title: 
+  en: File
+  de: Datei
+fields:
+  alt:
+    label: 
+      en: Alternative text
+      de: Beschreibung
+    type: text
+    width: 1/2
