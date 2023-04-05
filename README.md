@@ -32,7 +32,7 @@ yarn build
 For updating Kirby to the latest version, just hit:
 
 ```bash
-./update.sh
+./scripts/update_kirby.sh
 ```
 
 For getting started with Kirby, read the awesome guide on [how to get started with Kirby](https://getkirby.com/docs/guide/quickstart).
@@ -81,42 +81,7 @@ return function ($page, $kirby, $site) {
 
 ```
 
-Additionally, you need to populate the pages with information that is needed for the meta tags to be filled out correctly. The plugin contains blueprints for this and are meant to be used as tabs in your pages:
-
-```
-title:     Default
-
-tabs:
-
-  # SEO META
-  meta: tabs/seo/meta
-
-```
-
-In the `site.yml` also setup the contact tab which will capture social media account information.
-
-```
-title:     Site
-
-tabs:
-
-  # Contact
-  contact: tabs/seo/contact
-```
-
-Finally, output the meta tags in your templates with the following snippet.
-
-```
-<?= snippet('seo/meta') ?>
-```
-
-For convenience the plugin also contains a favicon snippet:
-
-```
-<?= snippet('seo/favicon') ?>
-```
-
-You can generate the favicons at [this website link](https://realfavicongenerator.net/)
+You can generate favicons at [this website link](https://realfavicongenerator.net/)
 
 ## What's Kirby?
 - **[getkirby.com](https://getkirby.com)** – Get to know the CMS.
