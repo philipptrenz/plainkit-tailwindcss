@@ -5,9 +5,10 @@ const postcss = require("gulp-postcss");
 const php = require('gulp-connect-php');
 
 const paths = [
+    "site/**/*.php",
     "site/**/*.css",
     "tailwind.config.json",
-    "site/**/*.php"
+    "content/**/*.txt",
 ]
 
 // -------------------------------------
@@ -21,7 +22,7 @@ gulp.task('reload', function (cb) {
 gulp.task('postcss', function (cb) {
     return gulp.src("./site/tailwind/*.css") // read .css files from ./site/tailwind folder
         .pipe(postcss()) // compile using postcss
-        .pipe(gulp.dest("./assets/css")) // paste them in ./assets/css folder
+        .pipe(gulp.dest("./public/assets/css")) // paste them in ./assets/css folder
         .pipe(browserSync.stream());
     return cb();
 });
@@ -48,6 +49,8 @@ gulp.task('reload', function (cb) {
 // -------------------------------------
 gulp.task('connect', function (done) {
     php.server({
+        base: './public/',
+        keepalive: true,
         port: 8989,
         router: 'kirby/router.php',
     }, function () {

@@ -1,20 +1,17 @@
 <?php
 
-$base = __DIR__;
-
-require $base . '/kirby/vendor/autoload.php';
+require __DIR__ . '/../kirby/vendor/autoload.php';
 
 $kirby = new Kirby([
     'roots' => [
         'index'    => __DIR__,
-        'base'     => $base,
+        'base'     => $base    = dirname(__DIR__),
         'content'  => $base . '/content',
         'site'     => $base . '/site',
         'storage'  => $storage = $base . '/storage',
         'accounts' => $storage . '/accounts',
         'cache'    => $storage . '/cache',
-        'sessions' => $storage . '/sessions',
-        'logs'     => $storage . '/logs',
+        'sessions' => $storage . '/sessions'
     ]
 ]);
 
