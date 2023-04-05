@@ -19,7 +19,7 @@ gulp.task('reload', function (cb) {
 });
 
 gulp.task('postcss', function (cb) {
-    return gulp.src("./site/tailwind/*.css") // read .css files from ./src/ folder
+    return gulp.src("./site/tailwind/*.css") // read .css files from ./site/tailwind folder
         .pipe(postcss()) // compile using postcss
         .pipe(gulp.dest("./assets/css")) // paste them in ./assets/css folder
         .pipe(browserSync.stream());
