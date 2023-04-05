@@ -1,14 +1,39 @@
 title: Site
 
 tabs:
-
   # Content
   content:
     label: Content
     icon: text
-    preset: pages
-    unlisted: true
+    columns:
+      - width: 2/3
+        sections:
 
+          pages:
+            headline:
+              en: Pages
+              de: Seiten
+            type: pages
+            # templates:
+            #   - default
+            # create:
+            #   - default
+
+      - width: 1/3
+        sections:
+
+          files:
+            headline:
+              en: Global files
+              de: Globale Dateien
+            type: files
+
+          additional:
+            type: fields
+            fields:
+              gap:
+                type: gap
+  
   # Contact
   contact: tabs/seo/contact
 
