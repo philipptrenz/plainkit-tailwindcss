@@ -11,9 +11,9 @@ return [
 
   'updates' => [
     'plugins' => [
-        'sylvainjule/matomo'  => false,
-        'bnomei/robots-txt' => false,
-        'philipptrenz/kirby3-seo' => false,
+      'sylvainjule/matomo'  => false,
+      'bnomei/robots-txt' => false,
+      'philipptrenz/kirby3-seo' => false,
     ]
   ],
 

@@ -12,5 +12,7 @@ tabs:
   # Contact
   contact: tabs/seo/contact
 
+  # Matomo
+  matomo: tabs/matomo
 
 
