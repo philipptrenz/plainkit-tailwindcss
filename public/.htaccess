@@ -2,6 +2,10 @@
 # revision 2020-06-15
 # With some additional settings for caching, gzip, etc.
 
+# Allow access to this subdirectory
+Order allow,deny
+Allow from all
+
 # Deny access to all hidden files in root
 <FilesMatch "^\.(.+)$">
    order deny,allow
