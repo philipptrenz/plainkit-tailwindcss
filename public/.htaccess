@@ -80,6 +80,7 @@ SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 <IfModule mod_expires.c>
    ExpiresActive On
    ExpiresDefault "access plus 2 weeks"
+   ExpiresByType text/html "access plus 1 day"
    ExpiresByType text/css "access plus 1 month"
    ExpiresByType text/plain "access plus 1 month"
    ExpiresByType image/gif "access plus 4 month"
