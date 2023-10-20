@@ -4,6 +4,8 @@
     <?php 
         $themeColor = '';
         $maskIconColor = '';
+        $cssPath = 'assets/css/tailwind.css';
+        $cssVersion = filemtime($cssPath) ?? '';
     ?>
     
     <head>
@@ -14,7 +16,7 @@
             'themeColor' => $themeColor,
             'maskIconColor' => $maskIconColor,
         ]) ?>
-        <?= css('assets/css/tailwind.css') ?>
+        <?= css($cssPath . '?v=' . $cssVersion) ?>
         <?= snippet('matomo') ?>
     </head>
 
