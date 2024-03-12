@@ -1,0 +1,14 @@
+{
+    "name": "philipptrenz/cachebuster",
+    "description": "Makes sure that new versions of javascript and css files get loaded.",
+    "version": "1.0.0",
+    "type": "kirby-plugin",
+    "homepage": "https://philipptrenz.de",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Philipp Trenz",
+            "email": "mail@philipptrenz.de"
+        }
+    ]
+}
