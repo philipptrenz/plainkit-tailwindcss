@@ -4,36 +4,46 @@ const browserSync = require("browser-sync");
 const postcss = require("gulp-postcss");
 const php = require('gulp-connect-php');
 
+const minify = require('gulp-minify');
+
 const paths = [
     "site/**/*.php",
     "site/**/*.css",
+    "site/**/*.js",
     "tailwind.config.json",
     "content/**/*.txt",
 ]
 
+
 // -------------------------------------
 //   Task for compiling our CSS files using PostCSS
 // -------------------------------------
-gulp.task('reload', function (cb) {
-    browserSync.reload();
-    return cb();
-});
-
 gulp.task('postcss', function (cb) {
-    return gulp.src("./site/tailwind/*.css") // read .css files from ./site/tailwind folder
+    return gulp.src("./site/tailwind/*.css") // read .css files from ./src/ folder
         .pipe(postcss()) // compile using postcss
         .pipe(gulp.dest("./public/assets/css")) // paste them in ./assets/css folder
         .pipe(browserSync.stream());
     return cb();
 });
 
+
 // -------------------------------------
-//   Task for minifying images
+//   Bundle JavaScript
 // -------------------------------------
-gulp.task('reload', function (cb) {
-    browserSync.reload();
-    return cb();
-});
+gulp.task('js-compress', function() {
+    return gulp.src('site/js/*.js')
+        .pipe(minify({
+            ext: {
+                // src:'-debug.js',
+                min:'.min.js'
+            },
+            noSource: true,
+            exclude: ['d3'],
+            ignoreFiles: ['d3.js', '-min.js']
+      }))
+      .pipe(gulp.dest('./public/assets/js/dist'))
+  });
+
 
 // -------------------------------------
 //   Reloading in Browser
@@ -60,7 +70,7 @@ gulp.task('connect', function (done) {
             notify: false,
         });
     });
-    gulp.watch(paths, { usePolling: true }, gulp.series(gulp.parallel('postcss'), 'reload'))
+    gulp.watch(paths, { usePolling: true }, gulp.series(gulp.parallel('postcss', 'js-compress'), 'reload'))
     return done();
 });
 
@@ -80,10 +90,10 @@ gulp.task('clean', function () {
 // -------------------------------------
 //   Task: default
 // -------------------------------------
-gulp.task('default', gulp.series(gulp.parallel('postcss' /*, 'images'*/), 'connect'));
+gulp.task('default', gulp.series(gulp.parallel('postcss', 'js-compress'), 'connect'));
 
 
 // -------------------------------------
 //   Task: build
 // -------------------------------------
-gulp.task('build', gulp.series('clean', gulp.parallel('postcss' /*, 'images'*/)));
+gulp.task('build', gulp.series('clean', gulp.parallel('postcss', 'js-compress')));
