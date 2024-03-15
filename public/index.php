@@ -8,6 +8,7 @@ $kirby = new Kirby([
         'base'     => $base    = dirname(__DIR__),
         'content'  => $base . '/content',
         'site'     => $base . '/site',
+        'plugins'  => $base . '/plugins',
         'storage'  => $storage = $base . '/storage',
         'accounts' => $storage . '/accounts',
         'cache'    => $storage . '/cache',

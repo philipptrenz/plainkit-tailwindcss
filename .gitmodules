@@ -1,12 +1,12 @@
 [submodule "kirby"]
 	path = kirby
 	url = https://github.com/getkirby/kirby.git
-[submodule "site/plugins/kirby3-seo"]
-	path = site/plugins/kirby3-seo
-	url = https://github.com/philipptrenz/kirby3-seo
-[submodule "site/plugins/kirby3-robots-txt"]
-	path = site/plugins/kirby3-robots-txt
+[submodule "plugins/kirby4-seo"]
+	path = plugins/kirby4-seo
+	url = https://github.com/HashandSalt/kirby4-seo.git
+[submodule "plugins/kirby4-robots-txt"]
+	path = plugins/kirby4-robots-txt
 	url = https://github.com/bnomei/kirby3-robots-txt.git
-[submodule "site/plugins/kirby3-matomo"]
-	path = site/plugins/kirby3-matomo
-	url = https://github.com/sylvainjule/kirby-matomo.git
+[submodule "plugins/kirby4-matomo"]
+	path = plugins/kirby4-matomo
+	url = https://github.com/philipptrenz/kirby-matomo.git
